@@ -1,0 +1,9 @@
+.car-card {
+  max-width: 250px;
+  box-shadow: 0 -10px 5px 0px rgba(255, 255, 255, 0.9), 20px 0 25px 0px rgba(0, 0, 0, 0.1), -20px 0 25px 0px rgba(0, 0, 0, 0.1), 0 40px 25px 0px rgba(0, 0, 0, 0.1);
+  .car-card-image{
+    background-size: cover;
+    height: 190px;
+    object-fit: cover;
+  }
+}

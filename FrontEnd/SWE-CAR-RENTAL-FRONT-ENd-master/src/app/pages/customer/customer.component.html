@@ -1,0 +1,31 @@
+<div class="customer-page">
+  <form [formGroup]="customerForm" class="customer-form" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%" >
+        <mat-label class="star-required">First Name</mat-label>
+        <input matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Last Name</mat-label>
+        <input matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Birth Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+    </div>
+  </form>
+  <div fxLayout fxLayoutAlign="end start" class="submit-customer-btn">
+    <button mat-raised-button fxLayout fxFlex="50%" fxLayoutAlign="center">Submit</button>
+  </div>
+
+</div>
+

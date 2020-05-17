@@ -1,0 +1,35 @@
+<section class="search-booking-section">
+  <form [formGroup]="searchBookingFormGroup" fxFlex fxLayoutAlign="center center" fxLayoutGap="20px">
+    <mat-form-field appearance="outline"  >
+      <mat-label class="star-required">Booking Reference</mat-label>
+      <input matInput placeholder="Booking Reference" formControlName="bookingReference">
+    </mat-form-field>
+    <button mat-raised-button
+            fxLayout
+            fxLayoutAlign="center center"
+            [disabled]="searchBookingFormGroup.invalid"
+            (click)="searchBookingReference()">Search</button>
+  </form>
+</section>
+<section class="result-search-booking-section" [fxShow]="isAvailable">
+  <table>
+    <tr>
+      <th>Reference Number</th>
+      <th>booking Start Date</th>
+      <th>booking end Date</th>
+      <th>booking Status</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{bookingData.referenceNumber}}</td>
+      <td>{{bookingData.startDate}}</td>
+      <td>{{bookingData.endDate}}</td>
+      <td>{{bookingData.bookingStatus}}</td>
+      <td>
+        <button mat-icon-button (click)="delete(bookingData.referenceNumber)" *ngIf="bookingData['bookingStatus'] != 'Canceled'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </table>
+</section>

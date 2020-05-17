@@ -1,0 +1,28 @@
+.date-booking-section{
+  height: 600px;
+  background: url("../../../assets/images/bg-service.jpg") no-repeat 50%/cover;
+  background-position-y: 70%;
+  padding-left: 20px;
+  .home-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .home-title{
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 3rem;
+    }
+    .description-title{
+      font-size: 1rem;
+    }
+  }
+}
+.displaying-cars-card{
+  padding-top: 50px;
+}
+
+.cancel-booking-section{
+  .cancel-booking-btn-container{
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,63 @@
+<div class="car-page">
+  <form [formGroup]="carForm" class="car-form" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%" >
+        <mat-label class="star-required">Vin Number</mat-label>
+        <input matInput placeholder="Car Vin Number" formControlName="carVinNumber">
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Plate Number</mat-label>
+        <input matInput placeholder="Plate Number" formControlName="plateNumber">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Model</mat-label>
+        <input matInput placeholder="Model" formControlName="model">
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Make</mat-label>
+        <input matInput placeholder="Make" formControlName="make">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Model</mat-label>
+        <mat-select formControlName="model">
+          <mat-option value="2010">2010</mat-option>
+          <mat-option value="2011">2011</mat-option>
+          <mat-option value="2012">2012</mat-option>
+          <mat-option value="2013">2013</mat-option>
+          <mat-option value="2014">2014</mat-option>
+          <mat-option value="2015">2015</mat-option>
+          <mat-option value="2016">2016</mat-option>
+          <mat-option value="2017">2017</mat-option>
+          <mat-option value="2018">2018</mat-option>
+          <mat-option value="2019">2019</mat-option>
+          <mat-option value="2020">2020</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Category Name</mat-label>
+        <input matInput placeholder="Category Name" formControlName="categoryName">
+      </mat-form-field>
+    </div>
+
+    <div fxLayout class="full-width" fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Status</mat-label>
+        <input matInput placeholder="Status" formControlName="status">
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="50%">
+        <mat-label class="star-required">Rent Price Per Day</mat-label>
+        <input matInput placeholder="Rent Price Per Day" formControlName="rentPricePerDay">
+      </mat-form-field>
+    </div>
+  </form>
+  <div fxLayout fxLayoutAlign="end start" class="submit-car-btn">
+    <button mat-raised-button fxLayout fxFlex="50%" fxLayoutAlign="center">Submit</button>
+  </div>
+</div>
+

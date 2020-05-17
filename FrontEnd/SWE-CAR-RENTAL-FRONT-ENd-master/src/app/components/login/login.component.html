@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" class="login-form">
+  <button mat-icon-button  class="close-button" (click)="closeLogin()">
+    <mat-icon >close</mat-icon>
+  </button>
+  <div class="centered-content">
+    <h3>This Login page it's just for Admin and employees</h3>
+  </div>
+  <div class="username-password-fields">
+    <mat-form-field appearance="outline" class="width-field">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Username" formControlName="username">
+      <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-field">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Password" formControlName="password">
+      <mat-icon matSuffix></mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="login-button-container">
+    <button mat-raised-button (click)="login()" [disabled]="!loginForm.valid">Login</button>
+  </div>
+</form>

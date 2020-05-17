@@ -1,0 +1,25 @@
+<form [formGroup]="startEndDateFormGroup">
+  <div class="date-picker-container">
+    <mat-form-field class="date-picker-custom-field date-picker-left">
+      <mat-label>From</mat-label>
+      <input matInput [matDatepicker]="pickerTo" [min]="minDate"  formControlName="startDate">
+      <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+      <mat-datepicker #pickerTo></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="date-picker-custom-field date-picker-right">
+      <mat-label>To</mat-label>
+      <input matInput [matDatepicker]="pickerFrom" formControlName="endDate">
+      <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFrom></mat-datepicker>
+    </mat-form-field>
+    <div class="search-container">
+      <div class="circle-round">
+        <button mat-icon-button  (click)="emitSearch(startEndDateFormGroup.value)" [disabled]="startEndDateFormGroup.invalid">
+          <mat-icon >search</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+

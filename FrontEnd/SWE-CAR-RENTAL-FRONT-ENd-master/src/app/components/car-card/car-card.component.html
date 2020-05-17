@@ -1,0 +1,22 @@
+<div fxLayout fxLayoutGap="20px" fxLayoutAlign="center">
+  <mat-card class="car-card">
+    <img mat-card-image class="car-card-image" [src]="carImage">
+    <mat-card-content>
+      <p>
+        model:  {{model}} <br>
+        year: {{year}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions fxLayout fxLayoutAlign="space-between center">
+      <div>
+        <button mat-button>{{carRentPricePerDay}}$/day</button>
+        <button mat-button (click)="onBook()">Book</button>
+      </div>
+      <div>
+<!--        <button mat-icon-button [routerLink]="['/add-car']"><mat-icon >edit</mat-icon></button>-->
+<!--        <button mat-icon-button ><mat-icon >delete</mat-icon></button>-->
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="list-cars-page">
+  <div class="add-button-container">
+    <button mat-raised-button [routerLink]="['/add-car']">
+      Add Car
+    </button>
+  </div>
+
+  <app-car-card *ngFor="let car of carsData"
+                [model]="car['model']"
+                [year]="car['year']"
+                [carImage]="carData.imageUrl"
+                [carRentPricePerDay]="car['pricePerDay']"
+                (book)="goToCustomer(car['carId'])"></app-car-card>
+</div>
+

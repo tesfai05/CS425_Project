@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./global-styles/variables";
+
+html, body {
+  height: 100%;
+  background: $main-background-color;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.star-required:after {
+  color: red;
+  content: "*";
+}
+
+.centered-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.date-picker-custom-field {
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+    .mat-form-field-underline {
+      height: 0 !important;
+    }
+
+    .mat-form-field-label {
+      color: black;
+      padding-left: 20px;
+    }
+
+    .mat-datepicker-toggle {
+      color: black;
+    }
+    .mat-form-field-ripple{
+      height: 0;
+    }
+    .mat-form-field-flex {
+      background: white;
+      .mat-form-field-infix{
+        padding-left: 16px;
+      }
+    }
+  }
+}
+
+.date-picker-left {
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      border-right: 1px solid lightgrey;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+}
+
+.date-picker-right {
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      //border-top-right-radius: 30px;
+      //border-bottom-right-radius: 30px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.login-form{
+  .close-button{
+    float: right;
+  }
+  .username-password-fields{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .width-field{
+      width: 50%;
+    }
+  }
+  .login-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+      width: 50%;
+    }
+  }
+}
+

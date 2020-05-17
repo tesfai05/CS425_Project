@@ -1,0 +1,22 @@
+<section class="date-booking-section">
+  <div class="home-title-container">
+    <h1 class="home-title">
+      Way better than a rental car
+    </h1>
+    <p class="description-title">
+      Book unforgettable cars from trusted company around IOWA
+    </p>
+  </div>
+  <div>
+    <app-date-picker [minDate]="todayDate"
+                     (search)="search($event)"></app-date-picker>
+  </div>
+</section>
+<section class="cancel-booking-section">
+  <div fxLayout fxLayoutAlign="center center" class="cancel-booking-btn-container">
+    <button mat-raised-button
+            fxLayout
+            fxLayoutAlign="center center"
+            (click)="goToCancelBooking()">Cancel Bookings</button>
+  </div>
+</section>
